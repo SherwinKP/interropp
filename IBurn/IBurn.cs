@@ -83,7 +83,7 @@ namespace IMAPIv2
 
             progress.Update -= new DiscFormat2Data_EventsHandler(DiscFormat2Data_ProgressUpdate);
 
-            Console.WriteLine("----- Finished writing content -----");
+            Console.WriteLine("----- Finished writing content -----\nPress a key to continue");Console.ReadKey();
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace IMAPIv2
             dataWriterBurn.ClientName = "IMAPI Sample";
             dataWriterBurn.Write(stream);
 
-            Console.WriteLine("----- Finished writing content -----");
+            Console.WriteLine("----- Finished writing content -----\nPress a key to continue");Console.ReadKey();
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace IMAPIv2
                 Console.WriteLine("Mode Page: {0}".PadLeft(22), supportedModePage.ToString("F"));
             }
 
-            Console.WriteLine("\n----- Finished content -----");
+            Console.WriteLine("\n----- Finished content -----\nPress a key to continue");Console.ReadKey();
         }
 
         /// <summary>
@@ -272,7 +272,7 @@ namespace IMAPIv2
                 DisplayMediaType(supportedMediaType);
             }
 
-            Console.Write("\n----- Finished -----");
+            Console.Write("\n----- Finished -----\nPress a key to continue");Console.ReadKey();
         }
 
         /// <summary>
@@ -387,7 +387,7 @@ namespace IMAPIv2
                     } break;
                 case IMAPI_FORMAT2_DATA_WRITE_ACTION.IMAPI_FORMAT2_DATA_WRITE_ACTION_COMPLETED:
                     {
-                        Console.Write("Completed the burn."); Console.WriteLine("Press any key to exit.");
+                        Console.Write("Completed the burn.\nPress a key to continue"); 
                         Console.ReadKey();
                     } break;
                 default:
